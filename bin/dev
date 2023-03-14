@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Check we have deno installed
+command -v deno >/dev/null 2>&1 || { echo >&2 "Deno is not installed. Aborting."; exit 1; }
+
+# Run the server locally
+deno run --unstable --allow-net=:8000 --watch ./websocket-relay.ts
